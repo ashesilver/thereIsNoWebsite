@@ -37,7 +37,8 @@ function narrate (type,tag) {
 	for (var i = 0; i < narr[type][Number(tag)].length ; i++) {
 		alert(narr[type][Number(tag)][i]);
 	}
-	hideNSeek(document.getElementById(arguments[0]+String(Number(arguments[1])+1)))
+	hideNSeek(document.getElementById(arguments[0]+String(Number(arguments[1])+1)));
+    return;
 }
 
 
@@ -56,13 +57,10 @@ function init_canvas()
             alert("Impossible de récupérer le context du canvas");
             return;
         }
+    
 
-    var myInterval = setInterval(animate, 1000/30);
 }
-function animate()
-{
-    //C'est ici que toutes les manipulations sur le canvas se feront.
-}
+
 
 for (var i = 5; i >= 2; i--) {
 	hideNSeek(document.getElementById("title"+String(i)));
