@@ -23,12 +23,18 @@ function test() {
 
 function narrate (type,tag) {
 	
-	alert("getting json items...");
-	var tmp = localStorage.getItem("code/narration.json");
-	var narr = JSON.parse(tmp);
-	alert("done !")
+	var narr =
+    {
+    "title" : [["0"
+    ],["hey...", "What are you doing on this definitly-not-a-website thing ?"
+    ],[ "What are you trying to do ?","there's no website, just me..."
+    ],[ "you're loosing your time here..."
+    ],[ "dude, go away !","there is NO WEBSITE !"
+    ]
+    ]
+    };
 	
-	for (var i = narr[type][Number(tag)].length - 1; i >= 0; i--) {
+	for (var i = 0; i < narr[type][Number(tag)].length ; i++) {
 		alert(narr[type][Number(tag)][i]);
 	}
 	hideNSeek(document.getElementById(arguments[0]+String(Number(arguments[1])+1)))
