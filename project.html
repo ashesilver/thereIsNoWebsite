@@ -1,31 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<script type="text/javascript" async src="code/jeu.js"></script>
-	<title>There is no Website</title>
-	<link rel="stylesheet" type="text/css" media="all" href="css/index.css">
-</head>
-<body>
-	<table>
- 		<h1 id="title1" onclick="narrate('title','1');">There is no website.</h1>
- 		<h1 id="title2" onclick="narrate('title','2');">There is no website.</h1>
- 		<h1 id="title3" onclick="narrate('title','3');">There is no website.</h1>
- 		<h1 id="title4" onclick="narrate('title','4');">There is no website.</h1>
- 		<h1 id="title5" onclick="titleAnimation();">There is no website.</h1>
- 		<h1 id="title6"></h1>
-	</table>
-	<div class="rmp"> </div>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css" />
+		<script type="text/javascript" src="js.js"></script>
+		<title> There is no website </title>
+	</head>
+
+
+
+	<body>
+		<div class="rmp"> </div>
 
 		<!-- Le menu de navigation sur le cote -->
-		<div id="nav" class="sidenavMenu">
+		<div class="sidenavMenu">
 			<a href="CV_2.html">Elite trooper #6942066647</a>
 			<a href="CV_1.html">Elite trooper #6942066642</a>
 			<a href="credits.html">Remerciments, crédits</a>
 		</div>
 
 		<!-- Le bouton de recherche -->
-		<input id="searchbar" type="text" name="search" placeholder="There is no result...">
+		<input type="text" name="search" placeholder="There is no result...">
 		<!-- Le reste est dans le css -->
 
 
@@ -48,14 +43,14 @@
 		</iframe>
 
 		<!-- Le bouton pour se connecter (en fait non) -->
-		<button class="deroulant" type="button" onclick="hideNSeek(document.getElementById('connecter'));">Don't try to connect</button> <!-- bouton deroulant la div de connection -->
+		<button class="deroulant" type="button" onclick="connecting()">Don't try to connect</button> <!-- bouton deroulant la div de connection -->
 
 		<!-- La case de connection qu'on ouvre -->
 		<div class="field"> <!-- Pour faire genre on se connecte (toujours pas) -->
 			<fieldset id="connecter" style="display:none;">
 				There is no user : <br><br><input type="text" name="user" value="No user"><br>
 				There is no password : <br><br><input type="text" name="pass" value="No password"><br>
-				<button type="button" onclick="narrate('connexion','1');"> You want to try?</button>
+				<button type="button" onclick="connection()"> You want to try?</button>
 			</fieldset>
 		</div>
 
@@ -64,15 +59,6 @@
 			<a > A message to the dev? </a>
 		</div>
 
-	<!--
-	<form method="post">
-	<fieldset><legend>p'tite question...</legend>
-		<label for="yup">connaissez vous twitch prime ?</label>
-   			<input type="yup" name="yup" size="25" maxlength="50" value="" id="yup" />
-   			<br/>
-   			<input type="submit" value="Alors ?" />
-	</fieldset>
-	</form> -->
+	</body>
 
-</body>
 </html>
