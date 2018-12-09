@@ -51,7 +51,6 @@ function narrate (type,tag) {
 	for (var i = 0; i < narr[type][Number(tag)].length ; i++) {
 		alert(narr[type][Number(tag)][i]);
 	}
-	hideNSeek(document.getElementById(arguments[0]+String(Number(arguments[1])+1)));
     if (type == 'title') {
     hideNSeek(document.getElementById(arguments[0]+String(Number(arguments[1])+1))); }
     return;
