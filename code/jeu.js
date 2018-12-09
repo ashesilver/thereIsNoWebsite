@@ -25,8 +25,8 @@ function test() {
 }
 
 function narrate (type,tag) {
-    //both strings,
-    //describes which elemnt of the narrative context shall be displayed
+    //both strings, 
+    //which describes which elemnt of the narrative context sahll be displayed
 	
 	var narr =
     {
@@ -52,26 +52,26 @@ function narrate (type,tag) {
 }
 
 
+var x = 0;
+var intervalId = null;
 function titleAnimation(){
-    //
     narrate('title','5');
     for (var i = 1; i <= 4; i++) {
         hideNSeek(document.getElementById("title"+String(i)));
     }
-    move(document.getElementById('title5'),43,style['top']);
+    moveTitle();
 }
 
-function move(x,starter,property) {
-  var elem = x;
-  var param = elem.property;
-  var tmp = starter;
+function moveTitle() {
+  var elem = document.getElementById('title5'); 
+  var tmp = 0;
   var id = setInterval(frame, 10);
   function frame() {
-    if (tmp == 95) {
+    if (tmp >= 400) {
       clearInterval(id);
     } else {
-      tmp++; 
-      param = tmp + '%'; 
+      tmp = tmp + 9.81; 
+      elem.style['top'] = String(((tmp + Number(elem.style['top'].slice(0,2)))/10)+43) + '%'; 
     }
   }
 }
