@@ -1,13 +1,15 @@
 
-
+/*
 function sleep(milliseconds) {
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
         if ((new Date().getTime() - start) > milliseconds) {
-            break;}}}
+            break;}}} */
 
 
 function hideNSeek(x) {
+    //Doc object
+    //hides or reveals it
     if (x.style.display === "none") {
         x.style.display = "block";
     } else {
@@ -17,10 +19,14 @@ function hideNSeek(x) {
 
 
 function test() {
+    //test...
 	alert("test");
+    console.log('test');
 }
 
 function narrate (type,tag) {
+    //both strings,
+    //describes which elemnt of the narrative context shall be displayed
 	
 	var narr =
     {
@@ -46,26 +52,26 @@ function narrate (type,tag) {
 }
 
 
-var x = 0;
-var intervalId = null;
 function titleAnimation(){
+    //
     narrate('title','5');
     for (var i = 1; i <= 4; i++) {
         hideNSeek(document.getElementById("title"+String(i)));
     }
-    move();
+    move(document.getElementById('title5'),43,style['top']);
 }
 
-function move() {
-  var elem = document.getElementById('title5'); 
-  var width = 43;
+function move(x,starter,property) {
+  var elem = x;
+  var param = elem.property;
+  var tmp = starter;
   var id = setInterval(frame, 10);
   function frame() {
-    if (width == 95) {
+    if (tmp == 95) {
       clearInterval(id);
     } else {
-      width++; 
-      elem.style['top'] = width + '%'; 
+      tmp++; 
+      param = tmp + '%'; 
     }
   }
 }
