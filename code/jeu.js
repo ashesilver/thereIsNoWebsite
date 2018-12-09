@@ -37,29 +37,35 @@ function narrate (type,tag) {
     ],[ "dude, go away !","there is NO WEBSITE !" 
     ],[ "There is no JavaScript"]
     ], "menu" : [["0"
-    ],["well...","you broke that","don't touch anything, i'll be right back"
     ],["woooo","what the heck man ? "
     ],["hit the road, jack !","and don't you come back no more"]
     ], "connexion" : [["0"
-    ],['Told you nothing would happend']]
+    ],['Told you nothing would happend']
+    ], "searchbar" : [["0"
+    ],["well...","you broke that","don't touch anything, i'll be right back"
+    ],["",""
+    ],["",""]
+    ]
     };
 	
 	for (var i = 0; i < narr[type][Number(tag)].length ; i++) {
 		alert(narr[type][Number(tag)][i]);
 	}
 	hideNSeek(document.getElementById(arguments[0]+String(Number(arguments[1])+1)));
+    if (type == 'title') {
+    hideNSeek(document.getElementById(arguments[0]+String(Number(arguments[1])+1))); }
     return;
 }
 
 
-var x = 0;
-var intervalId = null;
 function titleAnimation(){
     narrate('title','5');
     for (var i = 1; i <= 4; i++) {
         hideNSeek(document.getElementById("title"+String(i)));
     }
     moveTitle();
+    hideNSeek(document.getElementById('searchbar'));hideNSeek(document.getElementById('searchbar'));
+    narrate('searchbar','1');
 }
 
 function moveTitle() {
@@ -67,7 +73,7 @@ function moveTitle() {
   var tmp = 0;
   var id = setInterval(frame, 10);
   function frame() {
-    if (tmp >= 400) {
+    if (tmp >= 375) {
       clearInterval(id);
     } else {
       tmp = tmp + 9.81; 
@@ -75,6 +81,38 @@ function moveTitle() {
     }
   }
 }
+
+function searchbarAct(x) {
+    switch(x) {
+        case 'there is a connexion form' :
+            hideNSeek(document.getElementById("connexionButton"));
+            break;
+        case 'there is a website' :
+            if (document.getElementById('title5').style.display =='block') {
+                hideNSeek(document.getElementById('title5'));
+            }
+            if(document.getElementById('second').style.display == 'block') {
+                hideNSeek(document.getElementById('second'));
+                hideNSeek(document.getElementById('first'));
+            } else {
+                hideNSeek(document.getElementById('first'));
+            }
+            break;
+        case 'there is a game' :
+            if(document.getElementById('first').style.display == 'block') {
+                hideNSeek(document.getElementById('first'));
+                hideNSeek(document.getElementById('second'));
+            } else {
+                hideNSeek(document.getElementById('second'));
+            }
+            break;
+        case 'there is a menu' :
+            hideNSeek(document.getElementById('nav'));
+            hideNSeek(document.getElementById('md'))
+            break;
+    }
+}
+
 
 //canvas related stuff
 
@@ -112,8 +150,6 @@ function init_canvas()
 for (var i = 5; i >= 2; i--) {
     hideNSeek(document.getElementById("title"+String(i)));
 }
-
-
 
 
 /*

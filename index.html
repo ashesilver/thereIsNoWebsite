@@ -25,7 +25,9 @@
 		</div>
 
 		<!-- Le bouton de recherche -->
-		<input id="searchbar" type="text" name="search" placeholder="There is no result...">
+		<form id="form" onsubmit="searchbarAct(document.getElementById('searchbar').value);">
+		<input id="searchbar" type="text" name="search" placeholder="There is no result..."/>
+		</form>
 		<!-- Le reste est dans le css -->
 
 
@@ -48,7 +50,7 @@
 		</iframe>
 
 		<!-- Le bouton pour se connecter (en fait non) -->
-		<button class="deroulant" type="button" onclick="hideNSeek(document.getElementById('connecter'));">Don't try to connect</button> <!-- bouton deroulant la div de connection -->
+		<button id="connexionButton" class="deroulant" type="button" onclick="hideNSeek(document.getElementById('connecter'));">Don't try to connect</button> <!-- bouton deroulant la div de connection -->
 
 		<!-- La case de connection qu'on ouvre -->
 		<div class="field"> <!-- Pour faire genre on se connecte (toujours pas) -->
@@ -60,7 +62,7 @@
 		</div>
 
 		<!-- Le bouton de message au developpeur -->
-		<div class="msgdev">
+		<div class="msgdev" id="md">
 			<a > A message to the dev? </a>
 		</div>
 
