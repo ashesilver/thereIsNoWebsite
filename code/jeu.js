@@ -1,10 +1,10 @@
 
-/*
+
 function sleep(milliseconds) {
     var start = new Date().getTime();
     for (var i = 0; i < 1e7; i++) {
         if ((new Date().getTime() - start) > milliseconds) {
-            break;}}} */
+            break;}}} 
 
 
 function hideNSeek(x) {
@@ -43,8 +43,8 @@ function narrate (type,tag) {
     ],['Told you nothing would happend']
     ], "searchbar" : [["0"
     ],["well...","you broke that","don't touch anything, i'll be right back"
-    ],["",""
-    ],["",""]
+    ],["yup, nothing here","(phew) nothing unusual..."
+    ],["let's get rid of this...","it's not like it matters to you"]
     ]
     };
 	
@@ -57,14 +57,22 @@ function narrate (type,tag) {
 }
 
 
+
+
 function titleAnimation(){
     narrate('title','5');
     for (var i = 1; i <= 4; i++) {
         hideNSeek(document.getElementById("title"+String(i)));
     }
     moveTitle();
-    hideNSeek(document.getElementById('searchbar'));hideNSeek(document.getElementById('searchbar'));
-    narrate('searchbar','1');
+    document.getElementById('searchbar').style.display = "block";
+    var id = setInterval(searchbarAppearance, 1000);
+    function searchbarAppearance(){
+        narrate('searchbar','1');
+        narrate('searchbar','3');
+        document.getElementById('title5').style.display = "none";
+        clearInterval(id);
+    }
 }
 
 function moveTitle() {
@@ -87,9 +95,7 @@ function searchbarAct(x) {
             hideNSeek(document.getElementById("connexionButton"));
             break;
         case 'there is a website' :
-            if (document.getElementById('title5').style.display =='block') {
-                hideNSeek(document.getElementById('title5'));
-            }
+            
             if(document.getElementById('second').style.display == 'block') {
                 hideNSeek(document.getElementById('second'));
                 hideNSeek(document.getElementById('first'));
@@ -107,9 +113,12 @@ function searchbarAct(x) {
             break;
         case 'there is a menu' :
             hideNSeek(document.getElementById('nav'));
-            hideNSeek(document.getElementById('md'))
+            hideNSeek(document.getElementById('md'));
             break;
+        default :
+            narrate('searchbar',"2");
     }
+    return false;
 }
 
 

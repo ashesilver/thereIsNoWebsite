@@ -15,7 +15,7 @@
  		<h1 id="title5" onclick="titleAnimation();">There is no website.</h1>
  		<h1 id="title6"></h1>
 	</table>
-	<div class="rmp"> </div>
+	<div class="rmp"></div>
 
 		<!-- Le menu de navigation sur le cote -->
 		<div id="nav" class="sidenavMenu">
@@ -25,8 +25,8 @@
 		</div>
 
 		<!-- Le bouton de recherche -->
-		<form id="form" onsubmit="searchbarAct(document.getElementById('searchbar').value);">
-		<input id="searchbar" type="text" name="search" placeholder="There is no result..."/>
+		<form action="" id="form" onsubmit="searchbarAct(document.getElementById('searchbar').value);">
+		<input id="searchbar" type="text" placeholder="There is no result..."/>
 		</form>
 		<!-- Le reste est dans le css -->
 
@@ -37,7 +37,7 @@
 			scrolling = "no"
 			style="display:none;position:absolute;height:48%;width:84%;margin-left:15%;top:50%"
 			src="https://colorlib.com/etc/404/colorlib-error-404-17/" >
-			Sorry your browser doesn't support a web page from another website that we stole to make other think we worked...
+			Sorry your browser doesn't support a web page from another website <!--that we stole to make other think we worked...-->
 		</iframe>
 
 
@@ -46,7 +46,7 @@
 			id="second"
 			style="display:none;position:absolute;height:48%;width:84%;margin-left:15%;top:50%"
 			src="http://oujevipo.fr/general/4580-there-is-no-game/" >
-			Sorry your browser doesn't support a web page from another website that we stole to make other think we worked...
+			Sorry your browser doesn't support a web page from another website <!--that we stole to make other think we worked...-->
 		</iframe>
 
 		<!-- Le bouton pour se connecter (en fait non) -->
@@ -63,14 +63,14 @@
 
 		<!-- Le bouton de message au developpeur -->
 		<div class="msgdev" id="md">
-			<a > A message to the dev? </a>
+			<a> A message to the dev? </a>
 		</div>
 
 	<!--
 	<form method="post">
 	<fieldset><legend>p'tite question...</legend>
 		<label for="yup">connaissez vous twitch prime ?</label>
-   			<input type="yup" name="yup" size="25" maxlength="50" value="" id="yup" />
+   			<input type="text" name="yup" size="25" maxlength="50" value="" id="yup" placeholder="?"/>
    			<br/>
    			<input type="submit" value="Alors ?" />
 	</fieldset>
