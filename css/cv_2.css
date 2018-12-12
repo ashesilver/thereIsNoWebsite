@@ -21,15 +21,16 @@ body {
 
 h1 {
 	font-size: 200%; 
-	color: grey;
+	color: #444;
 	text-align: center;
 	font-family: Verdana;
 }
 
-wewe {
-	color: blue;
+legend {
+	color: #333;
 	font-size: 125%;
-	text-shadow: 5px 5px 3px blue;
+	text-shadow: 5px 5px 3px #444;
+	font-weight:bold;
 }
 
 p {
@@ -37,23 +38,15 @@ p {
 	padding-top: 0px;
 }
 
-/*forms
 fieldset {
- 	padding:0 20px 20px 20px;
-	margin-bottom:10px;
-	border:1px solid #DF3F3F;
+	border:10px solid #222;
 }
 
-legend {
-	color:#DF3F3F;
-	font-weight:bold
+.Languages {
+	margin-left: 30px;
+
 }
 
-form {
-	margin-top: 2%;
-	width: 40%;
-}
-*/
 
 /*links*/
 	
@@ -62,7 +55,7 @@ form {
 	    width: 200px;
 	    position: absolute;
 	    z-index: 1;
-	    background-color: gray;
+	    background-color: black;
 	    overflow-x: hidden;
 	}
 
