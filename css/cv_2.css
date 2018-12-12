@@ -12,20 +12,29 @@ body {
 }
 
 /*titre*/
+
+.toobadicantreachthis {
+	position: absolute;
+	left: 25%;
+	font-family: Consolas;
+}
+
 h1 {
 	font-size: 200%; 
 	color: grey;
 	text-align: center;
 	font-family: Verdana;
-	position: absolute;
-	left: 25%;
 }
 
 wewe {
-	color: black;
-	font-family: Consolas;
-	position: absolute;
-	left: 25%;
+	color: blue;
+	font-size: 125%;
+	text-shadow: 5px 5px 3px blue;
+}
+
+p {
+	margin-top: 2px;
+	padding-top: 0px;
 }
 
 /*forms
