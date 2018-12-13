@@ -112,6 +112,7 @@ function searchbarAct(x) {
             }
             break;
         case 'there is a menu' :
+            narrate("menu","1");
             hideNSeek(document.getElementById('nav'));
             hideNSeek(document.getElementById('md'));
             break;

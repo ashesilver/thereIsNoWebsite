@@ -129,7 +129,7 @@ input[type=text] {
 }
 
 /* When the input field gets focus, change its width */
-input[name=search]:focus {
+input[id=searchbar]:focus {
     width: 60%;
 }
 
