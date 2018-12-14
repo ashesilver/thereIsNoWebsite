@@ -60,6 +60,8 @@ function narrate (type,tag) {
 
 
 function titleAnimation(){
+    //graphic func
+    //calls moveTitle and searchbarAppearance
     narrate('title','5');
     for (var i = 1; i <= 4; i++) {
         hideNSeek(document.getElementById("title"+String(i)));
@@ -68,6 +70,8 @@ function titleAnimation(){
     document.getElementById('searchbar').style.display = "block";
     var id = setInterval(searchbarAppearance, 1000);
     function searchbarAppearance(){
+        //graphic
+        //makes the search bar appear
         narrate('searchbar','1');
         narrate('searchbar','3');
         document.getElementById('title5').style.display = "none";
@@ -76,10 +80,13 @@ function titleAnimation(){
 }
 
 function moveTitle() {
+    //graphic
+    //makes the title fall
   var elem = document.getElementById('title5'); 
   var tmp = 0;
   var id = setInterval(frame, 10);
   function frame() {
+    //frame counter
     if (tmp >= 375) {
       clearInterval(id);
     } else {
@@ -129,6 +136,7 @@ function searchbarAct(x) {
 
 //canvas related stuff
 
+/*
 function responsiveCanvas(canvas) {
     var height = window.innerHeight;
     var width = window.innerWidth;
@@ -154,7 +162,7 @@ function init_canvas()
     responsiveCanvas('canv');
     return context;
 }
-
+*/
 
 //script
 
