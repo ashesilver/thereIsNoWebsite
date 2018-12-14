@@ -90,9 +90,12 @@ function moveTitle() {
 }
 
 function searchbarAct(x) {
+    var caseCF = 'there is a connexion form';
+    var caseMen = 'there is a menu';
     switch(x) {
-        case 'there is a connexion form' :
+        case caseCF :
             hideNSeek(document.getElementById("connexionButton"));
+            caseCF = null;
             break;
         case 'there is a website' :
             
@@ -111,10 +114,11 @@ function searchbarAct(x) {
                 hideNSeek(document.getElementById('second'));
             }
             break;
-        case 'there is a menu' :
+        case caseMen :
             narrate("menu","1");
             hideNSeek(document.getElementById('nav'));
             hideNSeek(document.getElementById('md'));
+            caseMen = null;
             break;
         default :
             narrate('searchbar',"2");
